@@ -1,30 +1,11 @@
-import { useState, useEffect } from 'react'
-import { apiUrl } from './config/config'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
 
-const getData = async () => {
-  try {
-    const res = await fetch(`${apiUrl}/get`);
-    return await res.json()
-  } catch (err) {
-    console.log(err)
-  }
-}
-
-function App() {
-  const [data, setData] = useState([])
-
-  useEffect(  () => {
-    getData().then(res => {
-      setData(res)
-    })
-  }, [])
-
+function App () {
   return (
-        <>
-          {data.length > 0 ?
-            JSON.stringify(data, null, 2): null
-          }
-        </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   )
 }
 
