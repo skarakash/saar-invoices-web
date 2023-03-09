@@ -1,0 +1,1 @@
+export const apiUrl = "https://invoices-api.up.railway.app/invoices"
