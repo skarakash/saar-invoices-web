@@ -1,10 +1,10 @@
-import logo from '/src/assets/logo.svg'
+import { ReactComponent as LogoImage } from '/src/assets/logo.svg'
 
 const Logo = ({ classNameProp }) => {
   return (
     <div className={classNameProp}>
       <div className='header__logo-overlay' />
-      <img src={logo} alt='Logo' />
+      <LogoImage className='header__logo-image' />
     </div>
   )
 }
