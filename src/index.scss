@@ -1,0 +1,38 @@
+@import "styles/_mixins.scss";
+@import "styles/_variables.scss";
+@import "components/Header/_header.scss";
+
+@font-face {
+  font-family: "League Spartan";
+  src: local("League Spartan"),
+  url("src/fonts/LeagueSpartan-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  margin: 0 auto;
+  @include mobile {
+    max-width: 327px;
+  }
+  @include tablet {
+    max-width: 688px;
+  }
+  @include desktop {
+    max-width: 730px;
+  }
+}
